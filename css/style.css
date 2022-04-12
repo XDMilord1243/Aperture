@@ -1,0 +1,336 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+.header {
+  position: relative;
+  z-index: 5;
+  background: #181818;
+}
+
+.menu__burger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.menu__burger-item {
+  padding: 0px 32px 0px 0px;
+}
+
+.menu__burger-item a {
+  font-size: 15px;
+  padding: 0px 10px;
+  color: white;
+  line-height: 20%;
+}
+
+.nav {
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hamb {
+  display: none;
+}
+
+.popup {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .menu__burger-item a {
+    font-size: 14px;
+    color: #fff;
+    padding: 0px 10px;
+    border-bottom: none;
+  }
+  .menu__burger-item:hover {
+    padding: 0px;
+    border-bottom: none;
+  }
+
+  .nav .menu__burger {
+    display: none;
+  }
+
+  .hamb {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+
+  .hamb__field {
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 6px auto;
+    background-color: #fff;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+
+  .popup {
+    position: fixed;
+    top: 105px;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 100;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .popup .menu__burger {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    padding: 50px 0;
+    overflow: auto;
+  }
+  .popup .menu__burger > li {
+    width: 100%;
+  }
+  .popup .menu__burger > li > a {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3f3f3f;
+  }
+  .popup .menu__burger > li > a :hover {
+    background-color: rgba(122, 82, 179, 0.1);
+  }
+
+  .popup.open {
+    left: 0;
+  }
+
+  .hamb__field.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamb__field.active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+            transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamb__field.active .bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+            transform: translateY(-8px) rotate(-45deg);
+  }
+
+  body.noscroll {
+    overflow: hidden;
+  }
+}
+.header__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__button {
+  background-color: #fff;
+  border-radius: 14px;
+  padding: 12px 20px;
+}
+
+.studio {
+  background: url("/img/header/bg.jpg") no-repeat;
+  background-size: cover;
+  height: 716px;
+  color: #c0c0c0;
+}
+
+.studio__content {
+  padding-top: 450px;
+  text-align: center;
+}
+
+.studio__toptitle {
+  letter-spacing: 2px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.studio__title {
+  font-size: 54px;
+  padding-top: 5px;
+  color: white;
+}
+
+.studio__subtitle {
+  padding-top: 20px;
+  max-width: 580px;
+  margin: 0 auto;
+  line-height: 120%;
+}
+
+.studio__icon {
+  margin: 15px 40px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.studio__icon-text {
+  position: relative;
+  padding: 0px 12px;
+}
+.studio__icon-text:nth-child(1):before {
+  content: url("../img/header/1.svg");
+  position: relative;
+  top: 5px;
+}
+.studio__icon-text:nth-child(2):before {
+  content: url("../img/header/2.svg");
+  position: relative;
+  top: 5px;
+}
+.studio__icon-text:nth-child(3):before {
+  content: url("../img/header/3.svg");
+  position: relative;
+  top: 5px;
+}
+.studio__icon-text:nth-child(4):before {
+  content: url("../img/header/4.svg");
+  position: relative;
+  top: 5px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #000;
+  color: white;
+}
+
+.container {
+  max-width: 1188px;
+  padding: 0px 10px;
+  margin: 0 auto;
+}

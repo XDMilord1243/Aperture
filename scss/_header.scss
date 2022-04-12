@@ -1,0 +1,17 @@
+@import '_humb.scss';
+
+.header {
+}
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+}
+.header__button {
+    background-color: #fff;
+    border-radius: 14px;
+    padding: 12px 20px;
+}
