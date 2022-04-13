@@ -1,5 +1,5 @@
 .studio {
-    background: url('../img/header/bg.jpg') no-repeat;
+    background: url('../img/header/bg.jpg') no-repeat center center;
     background-size: cover;
     height: 716px;
     
@@ -61,4 +61,22 @@
         top: 5px;
     }
 
+}
+
+@media (max-width: 470px) {
+    .studio__content {
+        padding-top: 300px;
+    }
+    .studio__title {
+        font-size: 48px;
+    }
+    .studio__subtitle {
+        font-size: 12px;
+    }
+    .studio__icon {
+        margin: 15px 0px;
+        .studio__icon-text {
+            font-size: 8px;
+        }
+    }
 }
